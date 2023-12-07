@@ -15,14 +15,14 @@ $light-grayish-blue: #ecf2f8;
 
 // font
 $barlow: "Barlow Semi Condensed", sans-serif;
-$description: 11px;
-$body: 13px;
-$title: 20px;
+$description: 1.1rem;
+$body: 1.3rem;
+$title: 1.6rem;
 $medium: 500;
 $semi-bold: 600;
 
 html {
-  height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -39,21 +39,21 @@ main {
   display: inline-grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  gap: 30px;
+  gap: 3rem;
   position: absolute;
   inset: 0;
 }
 
 .testimonial-card {
   color: $white;
-  padding: 26px 32px 32px;
-  border-radius: 10px;
+  padding: 2.6rem 3.2rem 3.2rem;
+  border-radius: 1rem;
   box-shadow: 40px 60px 50px -47px $light-gray;
 
   .author {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
 
     .description {
       font-size: $description;
