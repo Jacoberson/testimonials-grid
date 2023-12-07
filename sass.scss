@@ -6,6 +6,7 @@ $desktop: 1440px;
 
 // colors
 $moderate-violet: #7440c7;
+$light-violet: #a775f1;
 $very-dark-grayish-blue: #48556a;
 $very-dark-blackish-blue: #19202d;
 $white: #fff;
@@ -20,17 +21,27 @@ $title: 20px;
 $medium: 500;
 $semi-bold: 600;
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: $barlow;
   font-size: $body;
+  font-weight: $medium;
   background-color: $light-grayish-blue;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
 }
 
 main {
-  display: grid;
+  display: inline-grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   gap: 30px;
+  position: absolute;
+  inset: 0;
 }
 
 .testimonial-card {
@@ -39,17 +50,37 @@ main {
   border-radius: 10px;
   box-shadow: 40px 60px 50px -47px $light-gray;
 
-  .description {
-    font-size: $description;
-    opacity: 50%;
-  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-  .author-image {
-    border-radius: 50%;
+    .description {
+      font-size: $description;
+      opacity: 50%;
+    }
+
+    .no-margin {
+      margin: 0;
+    }
+
+    .author-image {
+      border-radius: 50%;
+      width: 28px;
+    }
+
+    .violet-border-image {
+      border: 2px solid $moderate-violet;
+    }
+
+    .light-violet-border-image {
+      border: 2px solid $light-violet;
+    }
   }
 
   .testimonial-title {
     font-size: $title;
+    font-weight: $semi-bold;
   }
 
   .review {
@@ -61,7 +92,7 @@ main {
   background-color: $moderate-violet;
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: right 5rem top;
   grid-column: 1 / 3;
 }
 
@@ -85,6 +116,7 @@ main {
 }
 
 .kira {
+  align-self: stretch;
   grid-row: 1 / 3;
   grid-column-start: 4;
 }
