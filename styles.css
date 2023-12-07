@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+.testimonial-card {
+  color: #fff;
+  padding: 26px 32px 32px;
+}
+.testimonial-card .description {
+  font-size: 11px;
+  opacity: 50%;
+}
+.testimonial-card .author-image {
+  border-radius: 50%;
+}
+.testimonial-card .testimonial-title {
+  font-size: 20px;
+}
+.testimonial-card .review {
+  opacity: 70%;
+}
+
+.purple {
+  background-color: #7440c7;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.gray {
+  background-color: #48556a;
+}
+
+.black {
+  background-color: #19202d;
+}
+
+.white {
+  color: #48556a;
+}
+
+/*# sourceMappingURL=styles.css.map */

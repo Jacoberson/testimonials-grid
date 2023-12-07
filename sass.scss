@@ -7,13 +7,61 @@ $desktop: 1440px;
 // colors
 $moderate-violet: #7440c7;
 $very-dark-grayish-blue: #48556a;
-$very-dark-blackish-blue: #1a212e;
+$very-dark-blackish-blue: #19202d;
 $white: #fff;
 $light-gray: #cfcfcf;
-$light-grayish-blue: #edf2f748;
+$light-grayish-blue: #ecf2f8;
 
 // font
 $barlow: "Barlow Semi Condensed", sans-serif;
+$description: 11px;
 $body: 13px;
+$title: 20px;
 $medium: 500;
 $semi-bold: 600;
+
+body {
+  font-family: $barlow;
+  font-size: $body;
+}
+
+.testimonial-card {
+  color: $white;
+  padding: 26px 32px 32px;
+
+  .description {
+    font-size: $description;
+    opacity: 50%;
+  }
+
+  .author-image {
+    border-radius: 50%;
+  }
+
+  .testimonial-title {
+    font-size: $title;
+  }
+
+  .review {
+    opacity: 70%;
+  }
+}
+
+.purple {
+  background-color: $moderate-violet;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.gray {
+  background-color: $very-dark-grayish-blue;
+}
+
+.black {
+  background-color: $very-dark-blackish-blue;
+}
+
+.white {
+  color: $very-dark-grayish-blue;
+}
