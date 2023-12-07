@@ -23,11 +23,21 @@ $semi-bold: 600;
 body {
   font-family: $barlow;
   font-size: $body;
+  background-color: $light-grayish-blue;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 30px;
 }
 
 .testimonial-card {
   color: $white;
   padding: 26px 32px 32px;
+  border-radius: 10px;
+  box-shadow: 40px 60px 50px -47px $light-gray;
 
   .description {
     font-size: $description;
@@ -52,16 +62,29 @@ body {
   background-image: url("./images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right;
+  grid-column: 1 / 3;
 }
 
 .gray {
   background-color: $very-dark-grayish-blue;
+  grid-column: 3;
 }
 
 .black {
   background-color: $very-dark-blackish-blue;
+  grid-column: 2 / 4;
 }
 
 .white {
+  background-color: $white;
   color: $very-dark-grayish-blue;
+}
+
+.jeanette {
+  grid-row-start: 2;
+}
+
+.kira {
+  grid-row: 1 / 3;
+  grid-column-start: 4;
 }
