@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
 // breakpoints
-$mobile: 375px;
-$desktop: 1440px;
+$desktop: 1439px;
 
 // colors
 $moderate-violet: #7440c7;
@@ -21,6 +20,12 @@ $title: 1.6rem;
 $medium: 500;
 $semi-bold: 600;
 
+@mixin respond-mobile {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -30,18 +35,18 @@ body {
   font-size: $body;
   font-weight: $medium;
   background-color: $light-grayish-blue;
-  overflow: hidden;
-  position: absolute;
-  inset: 0;
 }
 
 main {
-  display: inline-grid;
+  display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   gap: 3rem;
-  position: absolute;
-  inset: 0;
+
+  @include respond-mobile {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimonial-card {
@@ -94,16 +99,28 @@ main {
   background-repeat: no-repeat;
   background-position: right 5rem top;
   grid-column: 1 / 3;
+
+  @include respond-mobile {
+    grid-column: auto;
+  }
 }
 
 .gray {
   background-color: $very-dark-grayish-blue;
   grid-column: 3;
+
+  @include respond-mobile {
+    grid-column: auto;
+  }
 }
 
 .black {
   background-color: $very-dark-blackish-blue;
   grid-column: 2 / 4;
+
+  @include respond-mobile {
+    grid-column: auto;
+  }
 }
 
 .white {
@@ -113,10 +130,19 @@ main {
 
 .jeanette {
   grid-row-start: 2;
+
+  @include respond-mobile {
+    grid-row: auto;
+  }
 }
 
 .kira {
   align-self: stretch;
   grid-row: 1 / 3;
   grid-column-start: 4;
+
+  @include respond-mobile {
+    grid-row: auto;
+    grid-column: auto;
+  }
 }
